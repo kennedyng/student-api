@@ -7,8 +7,8 @@ A REST API for managing student records that teaches **both API usage and testin
 **First step:** Get the comprehensive testing requirements document:
 
 ```bash
-curl {{BASE_URL}}/docs/requirements -o Student_API_Testing_Requirements.html
-# OR visit: {{BASE_URL}}/docs and click "Download Testing Requirements"
+curl https://student-api-rouge.vercel.app/docs/requirements -o Student_API_Testing_Requirements.html
+# OR visit: https://student-api-rouge.vercel.app/docs and click "Download Testing Requirements"
 ```
 
 This document contains everything you need to validate the API systematically! ðŸ“‹
@@ -18,28 +18,28 @@ This document contains everything you need to validate the API systematically! ð
 ### Base URL
 
 ```
-{{BASE_URL}}
+https://student-api-rouge.vercel.app
 ```
 
-Students will receive the actual deployment URL after the API is deployed to Render.
+The API is now live and deployed on Vercel!
 
 ### Quick Start
 
 1. **Check API Status**
 
    ```bash
-   curl {{BASE_URL}}/health
+   curl https://student-api-rouge.vercel.app/health
    ```
 
 2. **Get All Students**
 
    ```bash
-   curl {{BASE_URL}}/students
+   curl https://student-api-rouge.vercel.app/students
    ```
 
 3. **Create a Student**
    ```bash
-   curl -X POST {{BASE_URL}}/students \
+   curl -X POST https://student-api-rouge.vercel.app/students \
      -H "Content-Type: application/json" \
      -d '{"id": 123, "name": "John Doe", "email": "john@example.com"}'
    ```
@@ -49,7 +49,7 @@ Students will receive the actual deployment URL after the API is deployed to Ren
 Download the comprehensive testing requirements document to validate the API systematically:
 
 ```bash
-curl {{BASE_URL}}/docs/requirements > Student_API_Testing_Requirements.html
+curl https://student-api-rouge.vercel.app/docs/requirements > Student_API_Testing_Requirements.html
 ```
 
 **What you'll get:**

@@ -293,7 +293,7 @@ router.get('/docs/requirements', (req, res) => {
             </div>
             <div class="test-cases">
                 <strong>Test Cases:</strong>
-                <div class="test-case">curl -X GET {{BASE_URL}}/</div>
+                <div class="test-case">curl -X GET https://student-api-rouge.vercel.app/</div>
                 <div class="test-case">Verify response contains {"api": "Student API"}</div>
                 <div class="test-case">Verify HTTP status is 200</div>
             </div>
@@ -316,7 +316,7 @@ router.get('/docs/requirements', (req, res) => {
             </div>
             <div class="test-cases">
                 <strong>Test Cases:</strong>
-                <div class="test-case">curl -X GET {{BASE_URL}}/health</div>
+                <div class="test-case">curl -X GET https://student-api-rouge.vercel.app/health</div>
                 <div class="test-case">Verify status is "healthy"</div>
                 <div class="test-case">Verify timestamp is valid ISO format</div>
                 <div class="test-case">Verify uptime is a positive number</div>
@@ -349,9 +349,9 @@ router.get('/docs/requirements', (req, res) => {
             </div>
             <div class="test-cases">
                 <strong>Test Cases:</strong>
-                <div class="test-case">curl {{BASE_URL}}/students - Test basic functionality</div>
-                <div class="test-case">curl "{{BASE_URL}}/students?active=true" - Test active filter</div>
-                <div class="test-case">curl "{{BASE_URL}}/students?active=false" - Test inactive filter</div>
+                <div class="test-case">curl https://student-api-rouge.vercel.app/students - Test basic functionality</div>
+                <div class="test-case">curl "https://student-api-rouge.vercel.app/students?active=true" - Test active filter</div>
+                <div class="test-case">curl "https://student-api-rouge.vercel.app/students?active=false" - Test inactive filter</div>
                 <div class="test-case">Verify response structure and data accuracy</div>
             </div>
         </div>
@@ -389,9 +389,9 @@ router.get('/docs/requirements', (req, res) => {
             </div>
             <div class="test-cases">
                 <strong>Test Cases:</strong>
-                <div class="test-case">curl -X POST {{BASE_URL}}/students -H "Content-Type: application/json" -d '{"id": 9999, "name": "Test Student", "email": "test@example.com"}' - Test student creation</div>
-                <div class="test-case">curl -X POST {{BASE_URL}}/students -H "Content-Type: application/json" -d '{"id": 9999, "name": "Duplicate", "email": "duplicate@test.com"}' - Test duplicate handling</div>
-                <div class="test-case">curl -X POST {{BASE_URL}}/students -H "Content-Type: application/json" -d '{}' - Test validation</div>
+                <div class="test-case">curl -X POST https://student-api-rouge.vercel.app/students -H "Content-Type: application/json" -d '{"id": 9999, "name": "Test Student", "email": "test@example.com"}' - Test student creation</div>
+                <div class="test-case">curl -X POST https://student-api-rouge.vercel.app/students -H "Content-Type: application/json" -d '{"id": 9999, "name": "Duplicate", "email": "duplicate@test.com"}' - Test duplicate handling</div>
+                <div class="test-case">curl -X POST https://student-api-rouge.vercel.app/students -H "Content-Type: application/json" -d '{}' - Test validation</div>
                 <div class="test-case">Verify response codes and data validation</div>
             </div>
         </div>
@@ -426,7 +426,7 @@ router.get('/docs/requirements', (req, res) => {
             </div>
             <div class="test-cases">
                 <strong>Test Cases:</strong>
-                <div class="test-case">curl -X GET {{BASE_URL}}/students/2420983</div>
+                <div class="test-case">curl -X GET https://student-api-rouge.vercel.app/students/2420983</div>
                 <div class="test-case">Test with existing student ID</div>
                 <div class="test-case">Test with non-existent student ID (should return 404)</div>
                 <div class="test-case">Test with invalid ID format (non-numeric)</div>
@@ -505,9 +505,9 @@ router.get('/docs/requirements', (req, res) => {
             </div>
             <div class="test-cases">
                 <strong>Test Cases:</strong>
-                <div class="test-case">curl -X DELETE {{BASE_URL}}/students/2420983 - Test student deletion</div>
-                <div class="test-case">curl -X DELETE {{BASE_URL}}/students/999999 - Test non-existent student</div>
-                <div class="test-case">curl -X DELETE {{BASE_URL}}/students/abc - Test invalid ID format</div>
+                <div class="test-case">curl -X DELETE https://student-api-rouge.vercel.app/students/2420983 - Test student deletion</div>
+                <div class="test-case">curl -X DELETE https://student-api-rouge.vercel.app/students/999999 - Test non-existent student</div>
+                <div class="test-case">curl -X DELETE https://student-api-rouge.vercel.app/students/abc - Test invalid ID format</div>
                 <div class="test-case">Verify response codes and error handling</div>
             </div>
         </div>
@@ -545,9 +545,9 @@ router.get('/docs/requirements', (req, res) => {
             </div>
             <div class="test-cases">
                 <strong>Test Cases:</strong>
-                <div class="test-case">curl "{{BASE_URL}}/search?q=john" - Test search functionality</div>
-                <div class="test-case">curl "{{BASE_URL}}/search?q=mi" - Test partial matching</div>
-                <div class="test-case">curl "{{BASE_URL}}/search" - Test missing parameter handling</div>
+                <div class="test-case">curl "https://student-api-rouge.vercel.app/search?q=john" - Test search functionality</div>
+                <div class="test-case">curl "https://student-api-rouge.vercel.app/search?q=mi" - Test partial matching</div>
+                <div class="test-case">curl "https://student-api-rouge.vercel.app/search" - Test missing parameter handling</div>
                 <div class="test-case">Measure response time and performance</div>
             </div>
         </div>
@@ -581,9 +581,9 @@ router.get('/docs/requirements', (req, res) => {
             </div>
             <div class="test-cases">
                 <strong>Test Cases:</strong>
-                <div class="test-case">curl "{{BASE_URL}}/students/paginated" - Test default pagination</div>
-                <div class="test-case">curl "{{BASE_URL}}/students/paginated?page=1&size=5" - Test custom pagination</div>
-                <div class="test-case">curl "{{BASE_URL}}/students/paginated?page=2&size=10" - Test page navigation</div>
+                <div class="test-case">curl "https://student-api-rouge.vercel.app/students/paginated" - Test default pagination</div>
+                <div class="test-case">curl "https://student-api-rouge.vercel.app/students/paginated?page=1&size=5" - Test custom pagination</div>
+                <div class="test-case">curl "https://student-api-rouge.vercel.app/students/paginated?page=2&size=10" - Test page navigation</div>
                 <div class="test-case">Verify pagination structure and data accuracy</div>
             </div>
         </div>
@@ -1037,16 +1037,15 @@ router.get('/docs', (req, res) => {
 
             <div class="getting-started">
                 <h3>Base URL</h3>
-                <div class="code-block">{{BASE_URL}}</div>
-                <p><strong>🚀 Deployment Note:</strong> Students will receive the actual base URL after deployment to Render</p>
-                <p><em>Example:</em> <code>https://student-api-lab.onrender.com</code></p>
+                <div class="code-block">https://student-api-rouge.vercel.app</div>
+                <p><strong>🚀 Deployed API:</strong> The API is now live and ready for testing!</p>
 
                 <h3>Quick Start</h3>
                 <div class="step">
                     <div class="step-number">1</div>
                     <div>
                         <strong>Check API Status</strong><br>
-                        <div class="code-block">curl {{BASE_URL}}/health</div>
+                        <div class="code-block">curl https://student-api-rouge.vercel.app/health</div>
                     </div>
                 </div>
 
@@ -1054,7 +1053,7 @@ router.get('/docs', (req, res) => {
                     <div class="step-number">2</div>
                     <div>
                         <strong>Get All Students</strong><br>
-                        <div class="code-block">curl {{BASE_URL}}/students</div>
+                        <div class="code-block">curl https://student-api-rouge.vercel.app/students</div>
                     </div>
                 </div>
 
@@ -1062,7 +1061,7 @@ router.get('/docs', (req, res) => {
                     <div class="step-number">3</div>
                     <div>
                         <strong>Create a Student</strong><br>
-                        <div class="code-block">curl -X POST {{BASE_URL}}/students \\
+                        <div class="code-block">curl -X POST https://student-api-rouge.vercel.app/students \\
   -H "Content-Type: application/json" \\
   -d '{"id": 123, "name": "John Doe", "email": "john@example.com"}'</div>
                     </div>
@@ -1357,7 +1356,7 @@ router.get('/docs', (req, res) => {
                 <div class="endpoint-description">
                     Download the comprehensive API requirements and validation checklist.
                 </div>
-                <div class="code-block">curl {{BASE_URL}}/docs/requirements</div>
+                <div class="code-block">curl https://student-api-rouge.vercel.app/docs/requirements</div>
                 <p><strong>💡 Pro Tip:</strong> Save this document locally and use it to systematically test and validate the API against expected behavior.</p>
             </div>
         </div>
